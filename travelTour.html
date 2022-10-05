@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ADVENTURE</title>
+		<link rel="icon" href="./images/A.bmp" />
+		<link rel="stylesheet" href="./style.css" />
+		<script
+			src="https://kit.fontawesome.com/803a84d657.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<nav class="navbar">
+			<h1 class="logo">ADVENTURE</h1>
+			<ul class="nav-links">
+				<li><a class="active" href="#">Home</a></li>
+				<li><a href="#">Tours</a></li>
+				<li><a href="#">Explore</a></li>
+				<li><a href="#">About</a></li>
+				<li class="ctn"><a href="#">Contact</a></li>
+			</ul>
+			<i class="fa-solid fa-bars"></i>
+		</nav>
+		<header>
+			<div class="header-content">
+				<h2>Explore the colorful world</h2>
+				<div class="line"></div>
+				<h1>A WONDERFUL GLORYLAND</h1>
+				<a href="#" class="ctn">Learn More</a>
+			</div>
+		</header>
+		<!-- Events -->
+		<section class="events">
+			<div class="title">
+				<h1>Upcoming Events</h1>
+				<div class="line"></div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<img src="./images/bagan.jpg" alt="bagan_photo" />
+					<h4>Beautiful Bagan</h4>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+						doloribus
+					</p>
+					<a href="#" class="ctn">Learn More</a>
+				</div>
+				<div class="col">
+					<img src="./images/ngapali.jpg" alt="beach_photo" />
+					<h4>Beautiful Ladder</h4>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+						doloribus
+					</p>
+					<a href="#" class="ctn">Learn More</a>
+				</div>
+			</div>
+		</section>
+		<section class="explore">
+			<div class="explore-content">
+				<h1>EXPLORE THE WORLD</h1>
+				<div class="line"></div>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
+					placeat!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Soluta, placeat!
+				</p>
+				<a href="#" class="ctn">Learn More</a>
+			</div>
+		</section>
+		<section class="tours">
+			<div class="row">
+				<div class="col content-col">
+					<h1>UPCOMING TOURS & DESTINATION</h1>
+					<div class="line"></div>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+						voluptatibus?
+					</p>
+					<a href="#" class="ctn">Learn More</a>
+				</div>
+				<div class="col image-col">
+					<div class="image-gallery">
+						<img src="./images/kalaw.jpg" alt="" />
+						<img src="./images/innlay.jpg" alt="" />
+						<img src="./images/mandalay.jpg" alt="" />
+						<img src="./images/nyaungU.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="footer">
+			<div class="footer-content">
+				<p>Copyright &copy; KTRS</p>
+			</div>
+		</section>
+		<script>
+			const navLinks = document.querySelector('.nav-links');
+			const menuBar = document.querySelector('.navbar .fa-bars');
+			menuBar.addEventListener('click', () => {
+				navLinks.classList.toggle('toggle-menu');
+			});
+		</script>
+	</body>
+</html>
