@@ -19,7 +19,7 @@ header {
 	background-image: url(./images/bgan.jpg);
 	background-position: bottom;
 	background-size: cover;
-	/* background-color: rgba(0, 0, 0, 0.3); */
+	background-color: rgba(0, 0, 0, 0.3);
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
@@ -33,6 +33,7 @@ header::after {
 	z-index: 1;
 }
 .logo {
+	color: white;
 	width: auto;
 	height: auto;
 	margin: 0;
@@ -60,7 +61,9 @@ header::after {
 }
 a {
 	text-decoration: none;
-	/* color: whitesmoke; */
+}
+a:not(.logo):hover {
+	color: #9c4701;
 }
 .header-content {
 	margin-bottom: 150px;
@@ -87,13 +90,14 @@ a {
 	padding: 8px 15px;
 	background-color: #bd6d26;
 	border-radius: 30px;
-	color: whitesmoke;
+	color: rgb(255, 255, 255);
 }
 .active {
 	color: #f38d34;
 }
 .navbar {
-	position: absolute;
+	position: fixed;
+	background-color: #0707078b;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -116,7 +120,7 @@ ul li a {
 .nav-links li {
 	margin: 0 30px;
 }
-.navbar .fa-bars {
+.navbar .menu {
 	transform: scale(1.5);
 
 	position: absolute;
@@ -251,7 +255,6 @@ section {
 .tours .line {
 	margin-left: -1px;
 }
-/* Footer */
 .footer {
 	width: 100%;
 	height: 100px;
@@ -270,11 +273,17 @@ section {
 }
 /* Mobile devices */
 @media screen and (max-width: 850px) {
-	.navbar .fa-bars {
+	.navbar .menu {
 		display: block;
+		z-index: 1000;
 	}
 	.navbar {
 		padding: 0;
+		height: 80px;
+		background-color: #0707078b;
+	}
+	.fa-bars-sort {
+		z-index: 10000;
 	}
 	.logo {
 		position: absolute;
@@ -284,17 +293,19 @@ section {
 	.nav-links {
 		flex-direction: column;
 		width: 100%;
-		height: 100vh;
+		height: 0;
+		overflow: hidden;
 		justify-content: center;
 		background-color: #6d4e35;
-		transform: translateY(-100%);
 		transition: all 0.5s ease;
 	}
 	.nav-links li {
 		margin: 30px auto;
 	}
 	.toggle-menu {
-		transform: translateY(0);
+		height: 100vh;
+		overflow: initial;
+		z-index: 50;
 	}
 	/* Events */
 	.row {
@@ -339,14 +350,14 @@ img:hover {
 ul li a {
 	transition: all 0.3s ease;
 }
-ul li a:hover {
+/* ul li a:hover {
 	color: #ff7b00e3;
-}
+} */
 .ctn {
 	transition: all 0.3s ease;
 }
 .ctn:hover {
-	color: #9c4701;
 	background-color: whitesmoke;
+	color: #9c4701;
 	box-shadow: 2px 2px 5px #00000085, -1px -1px 5px #00000085;
 }

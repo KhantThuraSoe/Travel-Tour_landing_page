@@ -14,18 +14,18 @@
 	</head>
 	<body>
 		<nav class="navbar">
-			<section class="logo">
+			<a class="logo" href="#">
 				<img class="logo-icon" src="./images/A.bmp" src="logo_pic" />
 				<h1 class="logo-text">ADVENTURE</h1>
-			</section>
+			</a>
 			<ul class="nav-links">
-				<li><a class="active" href="#">Home</a></li>
-				<li><a href="#">Tours</a></li>
-				<li><a href="#">Explore</a></li>
-				<li><a href="#">About</a></li>
+				<li><a class="anchor active" href="#">Home</a></li>
+				<li><a class="anchor" href="#tours">Tours</a></li>
+				<li><a class="anchor" href="#explore">Explore</a></li>
+				<li><a class="anchor" href="#events">About</a></li>
 				<li class="ctn"><a href="#">Contact</a></li>
 			</ul>
-			<i class="fa-solid fa-bars"></i>
+			<i class="fa-solid fa-bars menu"></i>
 		</nav>
 		<header>
 			<div class="header-content">
@@ -36,7 +36,7 @@
 			</div>
 		</header>
 		<!-- Events -->
-		<section class="events">
+		<section id="events" class="events">
 			<div class="title">
 				<h1>Upcoming Events</h1>
 				<div class="line"></div>
@@ -62,7 +62,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="explore">
+		<section id="explore" class="explore">
 			<div class="explore-content">
 				<h1 class="referTo">EXPLORE THE WORLD</h1>
 				<div class="line"></div>
@@ -74,7 +74,7 @@
 				<a href="#" class="ctn">Learn More</a>
 			</div>
 		</section>
-		<section class="tours">
+		<section id="tours" class="tours">
 			<div class="row">
 				<div class="col content-col">
 					<h1>UPCOMING TOURS & DESTINATION</h1>
@@ -95,6 +95,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section class="footer">
 			<div class="footer-content">
 				<p>Copyright &copy; KTRS</p>
@@ -102,9 +103,21 @@
 		</section>
 		<script>
 			const navLinks = document.querySelector('.nav-links');
-			const menuBar = document.querySelector('.navbar .fa-bars');
+			const menuBar = document.querySelector('.navbar .menu');
 			menuBar.addEventListener('click', () => {
 				navLinks.classList.toggle('toggle-menu');
+			});
+
+			//Style the active navLink
+
+			const links = document.querySelectorAll('.anchor');
+			links.forEach((link) => {
+				link.addEventListener('click', (e) => {
+					const current = document.getElementsByClassName('active');
+					current[0].classList.remove('active');
+					let currentLink = e.target;
+					currentLink.classList.add('active');
+				});
 			});
 		</script>
 	</body>
